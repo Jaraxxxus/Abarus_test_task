@@ -1,5 +1,5 @@
-# Aborus_test_task
-multithreading socket programm for linux
+# multithreading socket programm for linux
+
 
 The task consists of two programs that need to be implemented. The interaction of programs should be implemented through the use of sockets.
 
