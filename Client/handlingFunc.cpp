@@ -37,6 +37,16 @@ std::string processString(std::string str) {
     return ss.str();
 }
 
+int digitOnlySum(const std::string &str) {
+    int sum = 0;
+    for (auto c: str) {
+        if (::isdigit(c)) {
+            sum += c - '0';
+        }
+    }
+    return sum;
+}
+
 void thread1(SharedBuffer &buffer) {
     //std::cout << "Thread ID " << std::this_thread::get_id() << std::endl;
     while (true) {
@@ -50,16 +60,6 @@ void thread1(SharedBuffer &buffer) {
         std::string result = processString(input);
         buffer.set(result);
     }
-}
-
-int digitOnlySum(const std::string &str) {
-    int sum = 0;
-    for (auto c: str) {
-        if (::isdigit(c)) {
-            sum += c - '0';
-        }
-    }
-    return sum;
 }
 
 void thread2(SharedBuffer &buffer, TcpClient &client) {
