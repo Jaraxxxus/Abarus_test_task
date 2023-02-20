@@ -15,7 +15,8 @@ void SharedBuffer::set(std::string &str) {
 std::string SharedBuffer::get() {
     std::unique_lock<std::mutex> lock(mutex);
     cv.wait(lock, [this]() { return length != 0; });
+    std::string result = std::move(data);
+    data = "";
     length = 0;
-
-    return std::move(data);
+    return result;
 }
