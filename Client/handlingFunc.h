@@ -11,13 +11,7 @@
 
 bool isInputStringCorrect(std::string str);
 
-std::stringstream ChangeEvenToKB(const std::string &str);
-
-std::string processString(std::string str);
-
 void thread1(SharedBuffer &buffer);
-
-int digitOnlySum(const std::string &str);
 
 void thread2(SharedBuffer &buffer, TcpClient &client);
 
