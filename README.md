@@ -1,4 +1,4 @@
-# multithreading socket programm for linux
+# multithreading socket programms for linux
 
 
 This is a multithreaded socket program for Linux consisting of two programs that interact with each other using sockets.
